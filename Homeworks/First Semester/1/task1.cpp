@@ -6,7 +6,7 @@
 * Winter semester 2020/2021
 *
 * @author Ivan Penev
-* @idnumber 62535
+* @idnumber 
 * @task 1
 * @compiler GCC
 *
