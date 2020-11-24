@@ -25,26 +25,23 @@ void ReadInput(std::vector<double>& first_arr, std::vector<double>& second_arr){
     FillArray(second_arr, M);
 }
 
-void BubbleSort(std::vector<double>& array){
-    bool swapped;
-    do {
-        swapped = false;
-        for (int i = 0; i < array.size() - 1; ++i) {
-            if (array[i] > array[i + 1]){
-                std::swap(array[i], array[i+1]);
-                swapped = true;
-            }
-        }
-    } while (swapped);
-}
-
 std::vector<double> MergeAndSortTwoArrays(std::vector<double> first_arr, std::vector<double> second_arr){
     std::vector<double> mergedArray;
-    mergedArray.insert(mergedArray.begin(), first_arr.begin(), first_arr.end());
-    mergedArray.insert(mergedArray.end(), second_arr.begin(), second_arr.end());
+    while (first_arr.size() > 0 && second_arr.size() > 0){
+        if (first_arr[0] < second_arr[0]){
+            mergedArray.push_back(first_arr[0]);
+            first_arr.erase(first_arr.begin());
+        } else {
+            mergedArray.push_back(second_arr[0]);
+            second_arr.erase(second_arr.begin());
+        }
 
-    BubbleSort(mergedArray);
-
+    }
+    if (first_arr.size() > second_arr.size()){
+        mergedArray.insert(mergedArray.end(), first_arr.begin(), first_arr.end());
+    } else {
+        mergedArray.insert(mergedArray.end(), second_arr.begin(), second_arr.end());
+    }
     return mergedArray;
 }
 
