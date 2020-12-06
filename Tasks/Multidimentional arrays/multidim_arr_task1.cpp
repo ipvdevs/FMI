@@ -2,8 +2,8 @@
 
 const int MAX_SIZE = 100;
 
-//Reading the input
 void read(double arr[MAX_SIZE][MAX_SIZE], int &rows, int &cols) {
+    //Reading the input.
     std::cout << "Enter matrix size (rows) x=";
     do {
         std::cin >> rows;
@@ -22,8 +22,7 @@ void read(double arr[MAX_SIZE][MAX_SIZE], int &rows, int &cols) {
     }
 }
 
-//Printing the minimal element on each row.
-void printMinElements(double matrix[MAX_SIZE][MAX_SIZE], const int rows, const int cols) {
+void printMinimalElements(double matrix[MAX_SIZE][MAX_SIZE], const int rows, const int cols) {
 
     for (int row = 0; row < rows; ++row) {
         int min = matrix[row][0];
