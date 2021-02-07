@@ -22,7 +22,7 @@ void printPermutations(char str[], int l, int r) {
 
     for (int i = l; i <= r; ++i) {
         swapChars(str[l], str[i]);
-        permute(str, l + 1, r);
+        printPermutations(str, l + 1, r);
         swapChars(str[l], str[i]);
     }
 }
