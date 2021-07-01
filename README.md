@@ -1,2 +1,2 @@
 # FMI
-Sofia University -  Faculty of Mathematics and Informatics - Projects, Homeworks, Tasks.
+Sofia University -  Faculty of Mathematics and Informatics - Introduction to programming - Projects, Homeworks, Tasks.
